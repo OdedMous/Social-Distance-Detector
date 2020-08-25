@@ -49,14 +49,18 @@ In addition, we will use the fact that the scene is unchanging and therefore the
 From here we get that the height values of "comparable" people necessarily be similar, or in other words – the division of the height values will be close to the value 1. 
 
 Illustration: in Figure 3, above each person we wrote his height. It can be seen the heights of people in the front of the image are around 240 pixels, in the middle of the image are around 50 pixels, and in the depth of the image are around 13 pixels.
-![Fig3](../master/images/Figure3.png)
+| ![Figure3](../master/images/Figure3.png) | 
+|:--:| 
+| *Figure 3* |
 
 <br/>
 Now we can improve idea 2: 
 First, for every pair of people in the image we'll check if they are comparable by calculating the division of their heights. If the given value is close to 1 it indicates that we can check if these people are close to each other, otherwise it is not relevant to check this. This step handles problem 2. <br/>
 Second, in order to solve problem 1, we divide the scene into imaginary 3D rectangles (see Figure 4) such that in each rectangle there will be a different threshold for deciding whether two people are close to each other. In order to implement it practically, I defined several height's ranges and for each range decided on different distance threshold which is suitable for it. 
 
-![Fig4](../master/images/Figure4.png)
+| ![Figure4](../master/images/Figure4.png) | 
+|:--:| 
+| *Figure 4* |
 
 ## **Final algorithm:**
 For every frame in the video: <br/>
