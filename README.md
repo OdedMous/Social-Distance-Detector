@@ -82,20 +82,21 @@ For every frame in the video: <br/>
 | *GIF* |
 
 **Disadvantages of idea 3:**
--	Distance in pixels is inaccurate.
--	We divide the scene into a finite-small number of rectangles such that in each rectangle there is a different distance threshold, and it's not accurate.
--	We chose the distance thresholds based on trial and error, which is also inaccurate.
+* Distance in pixels is inaccurate.
+* We divide the scene into a finite-small number of rectangles such that in each rectangle there is a different distance threshold, and it's not accurate.
+* We chose the distance thresholds based on trial and error, which is also inaccurate.
 -	This solution is very much adapted to this specific video, and if we want to use it for other video we will need to choose different thresholds etc.  We may even not be able to use this solution due to the different characteristics of each video.
--	This solution didn't consider cases which affecting the heights, such as:
-   * Children (whose heights are significantly different from that of adults).
-   * The fact that a person can bend or lie on the floor.
+* This solution didn't consider cases which affecting the heights, such as:
+  * Children (whose heights are significantly different from that of adults).
+  * The fact that a person can bend or lie on the floor.
 
 **Advantages of idea 3:**
 - Easy to implement. 
 - Provides a reasonable solution
 
 
-
+* ff
+  * 
 * Fruit
   * Apple
 
