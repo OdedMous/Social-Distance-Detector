@@ -9,7 +9,7 @@ The main part of this project is taken from [here](https://www.pyimagesearch.com
 ## **Solution's general structure**
 For every frame in the video:
 1) Classify objects which are people (using yolo).
-2) Calculate the distance between the center points of each pair of people, and mark the pairs that violate the distance limitation.
+2) Calculate the distance between the center points of each pair of people, and mark the pairs that violate the distance restriction.
 
 ## We'll focus in phase 2 – How to calculate the distance between pair of people?
 
@@ -29,8 +29,8 @@ However, in case the camera is placed in angle such that the people "are moving 
 | *Figure 2* |
 
 We can see that two mistakes were made in the context of distance limit:
-1) The pair at the front of the scene were not classified as violating the distance limit, even though they are close to each other (in constrant the women and the baby-wagon were classified as close to each other as requierd).
-2) The two people behind the woman with the baby-wagon were classified as violating the distance limit, even though they are far from each other in the real world.  <br/>
+1) The pair at the front of the scene were not classified as violating the distance restriction, even though they are close to each other (in constrant the women and the baby-wagon were classified as close to each other as requierd).
+2) The two people behind the woman with the baby-wagon were classified as violating the distance restriction, even though they are far from each other in the real world.  <br/>
 
 What went wrong? The answer is that these mistakes were derived from the depth dimension of the scene that reflected more in this video compared to the previous video. In more detail the 2 problems are: <br/>
 
@@ -41,7 +41,8 @@ What went wrong? The answer is that these mistakes were derived from the depth d
 #### Idea 3: Distance in pixels adjusted by heights
 The two problems above can be solved by using the heights in pixels of the people in the image. Note that the deeper a person is in the picture, the smaller his "height in pixels" (hereinafter:  height) becomes. In order to calculate the height of each person we use the rectangular frames that yolo provides as an output after it classify the objects as people. The calculation formula will be: 
 <br/>
-Height = the difference in the Y-axis between the bottom edge and the top edge of the rectangular frame. 
+
+*Height = the difference in the Y-axis between the bottom edge and the top edge of the rectangular frame.* 
 <br/>
 
 In addition, we will use the fact that the scene is unchanging and therefore the people in the scene are walking in a defined path, and also use the prior knowledge that humans do not fly in the air and do not shrink or grow all of a sudden, so the height of a person who is in the depth of the image is indeed smaller than the height of a person who is in in the front of the image. 
@@ -63,7 +64,7 @@ Second, in order to solve problem 1, we divide the scene into imaginary 3D recta
 
 ## **Final algorithm:**
 For every frame in the video: <br/>
-1) Classify object that are people (using yolo)
+1) Classify objects that are people (using yolo)
 2) For every pair of people:
    - Calculate the heights of the people, and determine whether the two people are "comparable".
    - If they are comparable:
