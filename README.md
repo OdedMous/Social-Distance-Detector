@@ -38,9 +38,7 @@ What went wrong? The answer is that these mistakes were derived from the depth d
 #### Idea 3: Distance in pixels adjusted by heights
 The two problems above can be solved by using the heights in pixels of the people in the image. Note that the deeper a person is in the picture, the smaller his "height in pixels" (hereinafter:  height) becomes. In order to calculate the height of each person we use the rectangular frames that yolo provides as an output after it classify the objects as people. The calculation formula will be: 
 <br/>
-<br/>
 Height = the difference in the Y-axis between the bottom edge and the top edge of the rectangular frame. 
-<br/>
 <br/>
 
 In addition, we will use the fact that the scene is unchanging and therefore the people in the scene are walking in a defined path, and also use the prior knowledge that humans do not fly in the air and do not shrink or grow all of a sudden, so the height of a person who is in the depth of the image is indeed smaller than the height of a person who is in in the front of the image. 
@@ -64,7 +62,7 @@ For every frame in the video:
 - if they are comparable:
   Calcuate the distance in pixels between them, and determine whether the distance limitation has been violated according to the distance threshold which suitable to the heights of these pair.
   
-**Results**
+## **Results** <br/>
 ![GIF](../master/images/GIF.gif)
 
 
