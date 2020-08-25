@@ -72,7 +72,6 @@ For every frame in the video: <br/>
   
 ## **Results** <br/>
 | ![Res1](../master/images/result1.png) | 
-|:--:| 
 | ![Res2](../master/images/result2.png) | 
 |:--:| 
 
