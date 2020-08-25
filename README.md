@@ -22,7 +22,10 @@ Calculate distance in pixels between every pair of people, and define some thres
 It turns out that this approach will work well only for some cases, such as when the point view of the camera is from above the scene (see Figure1). 
 ![Fig1](../master/images/Figure1.png)
 
-However, in case the camera is placed in angle such that the people "are moving to the depths of the image" this idea as it is won't work. Let's demonstrate this by a specific example – Figure2 is a frame from a video showing Rothschild Boulevard in Tel Aviv, and idea2 was activated on it. We can see that two mistakes were made in the context of distance limit:
+However, in case the camera is placed in angle such that the people "are moving to the depths of the image" this idea as it is won't work. Let's demonstrate this by a specific example – Figure2 is a frame from a video showing Rothschild Boulevard in Tel Aviv, and idea2 was activated on it. 
+![Fig2](../master/images/Figure2.png)
+
+We can see that two mistakes were made in the context of distance limit:
 1) The pair at the front of the scene were not classified as violating the distance limit, even though they are close to each other (in constrant the women and the baby-wagon were classified as close to each other as requierd).
 2) The two people behind the woman with the baby-wagon were classified as violating the distance limit, even though they are far from each other in the real world. 
 What went wrong? The answer is that these mistakes were derived from the depth dimension of the scene that reflected more in this video compared to the previous video. In more detail the 2 problems are:
