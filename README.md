@@ -34,22 +34,27 @@ What went wrong? The answer is that these mistakes were derived from the depth d
 1) There is no uniform distance threshold: In this frame, for two pairs of pixels that their distance in pixels is the same, the real distance they reflecting is not necessarily the same. This is because as we get closer to the infinity point in the image, the real distance between the objects becomes smaller. Hence the single defined threshold worked for objects that appeared in the middle of the image (the woman and the baby-wagon), and not for objects that appeared in the front of the image (the pair). In other words, the distance in pixels between two people is vary when the pair of people is in the front or in the background , and hence we can't define a single threshold  that is suitable for every pair of people in the frame.
 
 2) Not every pair of people in the image are "comparable": It can be that the centers of two people are close to each other in the image, while in the real world one person is in the front and the other is in the background (that is, they are far from each other), and therefore it is redundant to compare the distance between them in first place (hereinafter: "non-comparable objects").
-<br/>
+
 #### Idea 3: Distance in pixels adjusted by heights
 The two problems above can be solved by using the heights in pixels of the people in the image. Note that the deeper a person is in the picture, the smaller his "height in pixels" (hereinafter:  height) becomes. In order to calculate the height of each person we use the rectangular frames that yolo provides as an output after it classify the objects as people. The calculation formula will be: 
 <br/>
+<br/>
 Height = the difference in the Y-axis between the bottom edge and the top edge of the rectangular frame. 
+<br/>
 <br/>
 
 In addition, we will use the fact that the scene is unchanging and therefore the people in the scene are walking in a defined path, and also use the prior knowledge that humans do not fly in the air and do not shrink or grow all of a sudden, so the height of a person who is in the depth of the image is indeed smaller than the height of a person who is in in the front of the image. 
 From here we get that the height values of "comparable" people necessarily be similar, or in other words – the division of the height values will be close to the value 1. 
 
 Illustration: in Figure 3, above each person we wrote his height. It can be seen the heights of people in the front of the image is around 240 pixels, in the middle of the image is around 50 pixels, and in the depth of the image is around 13 pixels.
+![Fig3](../master/images/Figure3.png)
 
 <br/>
 Now we can improve idea 2: 
 First, for every pair of people in the image we'll check if they are comparable by calculating the division of their heights. If the given value is close to 1 it indicates that we can check if these people are close to each other, otherwise it is not relevant to check this. This step handles problem 2. <br/>
 Second, in order to solve problem 1, we divide the scene into imaginary 3D rectangles (see Figure 4) such that in each rectangle there will be a different threshold for deciding whether two people are close to each other. In order to implement it practically, I defined several height's ranges and for each range decided on different distance threshold which is suitable for it. 
+
+![Fig4](../master/images/Figure4.png)
 
 **Final algorithm:**
 For every frame in the video:
