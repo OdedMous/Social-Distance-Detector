@@ -25,6 +25,7 @@ It turns out that this approach will work well only for some cases, such as when
 | ![space-1.jpg](../master/images/Figure1.png) | 
 |:--:| 
 | *Space* |
+| rghhthhhttttttttttttt |
 
 However, in case the camera is placed in angle such that the people "are moving to the depths of the image" this idea as it is won't work. Let's demonstrate this by a specific example – Figure2 is a frame from a video showing Rothschild Boulevard in Tel Aviv, and we used idea2 on it. 
 ![Fig2](../master/images/Figure2.png)
