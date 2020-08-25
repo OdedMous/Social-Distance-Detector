@@ -66,8 +66,8 @@ Second, in order to solve problem 1, we divide the scene into imaginary 3D recta
 For every frame in the video: <br/>
 1) Classify object that are people (using yolo)
 2) For every pair of people:
-- Calculate the heights of the people, and determine whether the two people are "comparable".
-- if they are comparable:
+  - Calculate the heights of the people, and determine whether the two people are "comparable".
+  - if they are comparable:
   Calcuate the distance in pixels between them, and determine whether the distance limitation has been violated according to the distance threshold which suitable to the heights of these pair.
   
 ## **Results** <br/>
@@ -87,8 +87,8 @@ For every frame in the video: <br/>
 -	We chose the distance thresholds based on trial and error, which is also inaccurate.
 -	This solution is very much adapted to this specific video, and if we want to use it for other video we will need to choose different thresholds etc.  We may even not be able to use this solution due to the different characteristics of each video.
 -	This solution didn't consider cases which affecting the heights, such as:
-  - Children (whose heights are significantly different from that of adults).
-  - The fact that a person can bend or lie on the floor.
+   * Children (whose heights are significantly different from that of adults).
+   * The fact that a person can bend or lie on the floor.
 
 **Advantages of idea 3:**
 - Easy to implement. 
