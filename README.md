@@ -65,6 +65,8 @@ For every frame in the video:
   Calcuate the distance in pixels between them, and determine whether the distance limitation has been violated according to the distance threshold which suitable to the heights of these pair.
   
 **Results**
+![GIF](../master/images/GIF.gif)
+
 
 **Disadvantages of idea 3:**
 -	Distance in pixels is inaccurate.
