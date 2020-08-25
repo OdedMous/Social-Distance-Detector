@@ -20,7 +20,7 @@ Find in the scene an object which its real size is known, and then calculate rea
 #### Idea 2: Distance in pixels
 Calculate distance in pixels between every pair of people, and define some threshold that from it two people considered as close to each other. <br/>
 It turns out that this approach will work well only for some cases, such as when the point view of the camera is from above the scene (see Figure1). 
-![Fig1](../master/images/Figure1.png "Figure1")
+![Alt Fig1](../master/images/Figure1.png )
 
 However, in case the camera is placed in angle such that the people "are moving to the depths of the image" this idea as it is won't work. Let's demonstrate this by a specific example – Figure2 is a frame from a video showing Rothschild Boulevard in Tel Aviv, and we used idea2 on it. 
 ![Fig2](../master/images/Figure2.png)
