@@ -10,7 +10,7 @@ Given a video, check if there are people which violate the social distancing pol
 ## **Solution's general structure**
 For every frame in the video:
 1) Classify objects which are people (using yolo)
-2) Calculate the distance between the center points of each pair of people, and mark the pairs that violate the distance.
+2) Calculate the distance between the center points of each pair of people, and mark the pairs that violate the distance limitation.
 
 ## We'll focus in phase 2 – how to calculate the distance between pair of people?
 
