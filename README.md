@@ -3,16 +3,15 @@
 ## **Goal** <br/>
 Given a video, check if there are people which violate the social distancing policy.
 
-## **Notes** <br/>
-* This projects implements a small variation of the work of this: /// Details are given below.
-* The goal of this project is to use exist implementation, and do some non-lernable metnod. 
+## **Note** <br/>
+The main part of this project is taken from here: [link to Google!](https://www.pyimagesearch.com/2020/06/01/opencv-social-distancing-detector/). This project is only intended to perform a variation on the original version in order to deal with a case that the original project did not handle.
 
 ## **Solution's general structure**
 For every frame in the video:
 1) Classify objects which are people (using yolo).
 2) Calculate the distance between the center points of each pair of people, and mark the pairs that violate the distance limitation.
 
-## We'll focus in phase 2 – how to calculate the distance between pair of people?
+## We'll focus in phase 2 – How to calculate the distance between pair of people?
 
 #### Idea 1: Real distance
 Find in the scene an object which its real size is known, and then calculate real measurements by using some techniques (such as cross-ratio) in order to calculate the real distance between two people. A problem: It is not always possible to find such an object.
@@ -67,7 +66,7 @@ For every frame in the video: <br/>
 1) Classify object that are people (using yolo)
 2) For every pair of people:
    - Calculate the heights of the people, and determine whether the two people are "comparable".
-   - if they are comparable:
+   - If they are comparable:
   Calcuate the distance in pixels between them, and determine whether the distance limitation has been violated according to the distance threshold which suitable to the heights of these pair.
   
 ## **Results** <br/>
