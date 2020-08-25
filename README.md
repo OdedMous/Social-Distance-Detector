@@ -27,8 +27,10 @@ However, in case the camera is placed in angle such that the people "are moving 
 
 We can see that two mistakes were made in the context of distance limit:
 1) The pair at the front of the scene were not classified as violating the distance limit, even though they are close to each other (in constrant the women and the baby-wagon were classified as close to each other as requierd).
-2) The two people behind the woman with the baby-wagon were classified as violating the distance limit, even though they are far from each other in the real world. 
-What went wrong? The answer is that these mistakes were derived from the depth dimension of the scene that reflected more in this video compared to the previous video. In more detail the 2 problems are:
+2) The two people behind the woman with the baby-wagon were classified as violating the distance limit, even though they are far from each other in the real world.  <br/>
+
+What went wrong? The answer is that these mistakes were derived from the depth dimension of the scene that reflected more in this video compared to the previous video. In more detail the 2 problems are: <br/>
+
 1)There is no uniform distance threshold: In this frame, for two pairs of pixels that their distance in pixels is the same, the real distance they reflecting is not necessarily the same. This is because as we get closer to the infinity point in the image, the real distance between the objects becomes smaller. Hence the single defined threshold worked for objects that appeared in the middle of the image (the woman and the baby-wagon), and not for objects that appeared in the front of the image (the pair). In other words, the distance in pixels between two people is vary when the pair of people is in the front or in the background , and hence we can't define a single threshold  that is suitable for every pair of people in the frame.
 2)Not every pair of people in the image are "comparable": It can be that the centers of two people are close to each other in the image, while in the real world one person is in the front and the other is in the background (that is, they are far from each other), and therefore it is redundant to compare the distance between them in first place (hereinafter: "non-comparable objects").
 <br/>
