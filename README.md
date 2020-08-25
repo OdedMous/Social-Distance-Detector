@@ -76,8 +76,7 @@ For every frame in the video: <br/>
 :-------------------------:|:-------------------------:
 ![](../master/images/result1.png)  |  ![](../master/images/result2.png)
 | vggggg                    |  ggfgfgf  |
-:-------------------------:|:-------------------------:
-![GIF](../master/images/GIF.gif)
+|![GIF](../master/images/GIF.gif)|
 
 
 **Disadvantages of idea 3:**
