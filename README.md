@@ -1,4 +1,4 @@
-# Social Distance Detector (using yolo)
+# Social Distance Detector (using yolo) :mask:
 
 ## **Goal** <br/>
 Given a video, check if there are people which violate the social distancing policy.
