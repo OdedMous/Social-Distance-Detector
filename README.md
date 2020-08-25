@@ -54,7 +54,7 @@ Second, in order to solve problem 1, we divide the scene into imaginary 3D recta
 
 ![Fig4](../master/images/Figure4.png)
 
-**Final algorithm:**
+## **Final algorithm:**
 For every frame in the video: <br/>
 1) Classify object that are people (using yolo)
 2) For every pair of people:
