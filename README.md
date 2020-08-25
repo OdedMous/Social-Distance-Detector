@@ -11,25 +11,25 @@ For every frame in the video:
 1) Classify objects which are people (using yolo).
 2) Calculate the distance between the center points of each pair of people, and mark the pairs that violate the distance restriction.
 
-## We'll focus in phase 2 – How to calculate the distance between pair of people?
+## We'll focus on phase 2 – How to calculate the distance between pair of people?
 
 #### Idea 1: Real distance
-Find in the scene an object which its real size is known, and then calculate real measurements by using some techniques (such as cross-ratio) in order to calculate the real distance between two people. A problem: It is not always possible to find such an object.
+Find an object in the scene which its real size is known, and then calculate real measurements by using some techniques (such as cross-ratio) in order to calculate the real distance between two people. A problem: It is not always possible to find such an object.
 
 #### Idea 2: Distance in pixels
-Calculate distance in pixels between every pair of people, and define some threshold that from it two people considered as close to each other. <br/>
-It turns out that this approach will work well only for some cases, such as when the point view of the camera is from above the scene (see *Figure1*). 
+Calculate distance in pixels between every pair of people, and define some threshold that from it two people are considered as close to each other. <br/>
+It turns out that this approach will work well only in some cases, such as when the point view of the camera is from above the scene (see *Figure1*). 
 | ![Figure1](../master/images/Figure1.png) | 
 |:--:| 
 | *Figure 1* |
 
-However, in case the camera is placed in angle such that the people "are moving to the depths of the image" this idea as it is won't work. Let's demonstrate this by a specific example – Figure2 is a frame from a video showing Rothschild Boulevard in Tel Aviv, and we used idea2 on it. 
+However, in case the camera is placed in angle such that the people "are moving to the depths of the image" this idea as it is won't work. Let's demonstrate this by a specific example – Figure 2 shows frame from a video that displaying Rothschild Boulevard in Tel Aviv, and we used idea 2 on it:
 | ![Figure2](../master/images/Figure2.png) | 
 |:--:| 
 | *Figure 2* |
 
 We can see that two mistakes were made in the context of distance restriction:
-1) The pair at the front of the scene were not classified as violating the distance restriction, even though they are close to each other (in constrant the women and the baby-wagon were classified as close to each other as requierd).
+1) The pair at the front of the scene were not classified as violating the distance restriction, even though they are close to each other (in constrant, note that the women and the baby-wagon were classified as close to each other as requierd).
 2) The two people behind the woman with the baby-wagon were classified as violating the distance restriction, even though they are far from each other in the real world.  <br/>
 
 What went wrong? The answer is that these mistakes were derived from the depth dimension of the scene that reflected more in this video compared to the previous video. In more detail the 2 problems are: <br/>
