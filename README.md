@@ -12,7 +12,7 @@ For every frame in the video:
 1) Classify objects which are people (using yolo)
 2) Calculate the distance between the center points of each pair of people, and mark the pairs that violate the distance.
 
-We'll focus in phase 2 – how to calculate the distance between pair of people?
+## We'll focus in phase 2 – how to calculate the distance between pair of people?
 
 #### Idea 1: Calculate real measurements by finding a known real-size object
 
@@ -63,6 +63,8 @@ For every frame in the video:
 - Calculate the heights of the people, and determine whether the two people are "comparable".
 - if they are comparable:
   Calcuate the distance in pixels between them, and determine whether the distance limitation has been violated according to the distance threshold which suitable to the heights of these pair.
+  
+**Results**
 
 **Disadvantages of idea 3:**
 -	Distance in pixels is inaccurate.
