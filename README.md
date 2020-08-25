@@ -28,7 +28,7 @@ However, in case the camera is placed in angle such that the people "are moving 
 |:--:| 
 | *Figure 2* |
 
-We can see that two mistakes were made in the context of distance limit:
+We can see that two mistakes were made in the context of distance restriction:
 1) The pair at the front of the scene were not classified as violating the distance restriction, even though they are close to each other (in constrant the women and the baby-wagon were classified as close to each other as requierd).
 2) The two people behind the woman with the baby-wagon were classified as violating the distance restriction, even though they are far from each other in the real world.  <br/>
 
@@ -68,7 +68,7 @@ For every frame in the video: <br/>
 2) For every pair of people:
    - Calculate the heights of the people, and determine whether the two people are "comparable".
    - If they are comparable:
-  Calcuate the distance in pixels between them, and determine whether the distance limitation has been violated according to the distance threshold which suitable to the heights of these pair.
+  Calcuate the distance in pixels between them, and determine whether the distance restriction has been violated according to the distance threshold which suitable to the heights of these pair.
   
 ## **Results** <br/>
 | | |
@@ -92,5 +92,5 @@ For every frame in the video: <br/>
 
 **Advantages of idea 3:**
 - Easy to implement. 
-- Provides a reasonable solution
+- Provides a reasonable solution.
 
