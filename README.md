@@ -72,10 +72,10 @@ For every frame in the video: <br/>
   
 ## **Results** <br/>
 
-| Italic             |  Block letters |
+| .             |          .                          |
 :-------------------------:|:-------------------------:
 ![](../master/images/result1.png)  |  ![](../master/images/result2.png)
-| vggggg                    |  ggfgfgf  |
+| *Note that the algorithm was able to detect the violation in the front and the violation in the middle of the image, even though the distance in pixels between each pair is different.*                    |  ggfgfgf  |
 
 | ![](../master/images/GIF.gif) | 
 |:--:| 
