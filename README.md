@@ -44,7 +44,7 @@ Height = the difference in the Y-axis between the bottom edge and the top edge o
 In addition, we will use the fact that the scene is unchanging and therefore the people in the scene are walking in a defined path, and also use the prior knowledge that humans do not fly in the air and do not shrink or grow all of a sudden, so the height of a person who is in the depth of the image is indeed smaller than the height of a person who is in in the front of the image. 
 From here we get that the height values of "comparable" people necessarily be similar, or in other words – the division of the height values will be close to the value 1. 
 
-Illustration: in Figure 3, above each person we wrote his height. It can be seen the heights of people in the front of the image is around 240 pixels, in the middle of the image is around 50 pixels, and in the depth of the image is around 13 pixels.
+Illustration: in Figure 3, above each person we wrote his height. It can be seen the heights of people in the front of the image are around 240 pixels, in the middle of the image are around 50 pixels, and in the depth of the image are around 13 pixels.
 ![Fig3](../master/images/Figure3.png)
 
 <br/>
