@@ -72,6 +72,8 @@ For every frame in the video: <br/>
   
 ## **Results** <br/>
 
+| Italic             |  Block letters |
+:-------------------------:|:-------------------------:
 ![](../master/images/result1.png)  |  ![](../master/images/result2.png)
 | vggggg                    |  ggfgfgf  |
 
