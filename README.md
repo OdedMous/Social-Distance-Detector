@@ -14,8 +14,8 @@ For every frame in the video:
 
 ## We'll focus in phase 2 – how to calculate the distance between pair of people?
 
-#### Idea 1: Calculate real measurements by finding a known real-size object
-
+#### Idea 1: Real distance
+Find in the scene an object which its real size is known, and then calculate real measurements by using some techniques (such as cross-ratio) in order to calculate the real distance between two people. A problem: It is not always possible to find such an object.
 
 #### Idea 2: Distance in pixels
 Calculate distance in pixels between every pair of people, and define some threshold that from it two people considered as close to each other. <br/>
