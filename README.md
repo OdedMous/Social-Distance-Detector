@@ -52,12 +52,13 @@ Illustration: in Figure 3, above each person we wrote his height. It can be seen
 | ![Figure3](../master/images/Figure3.png) | 
 |:--:| 
 | *Figure 3* |
-
 <br/>
 Now we can improve idea 2:
-<br/>
+
+
 First, for every pair of people in the image we'll check if they are comparable by calculating the division of their heights. If the given value is close to 1 it indicates that we can check if these people are close to each other, otherwise it is not relevant to check this. This step handles problem 2.
-<br/>
+
+
 Second, in order to solve problem 1, we divide the scene into imaginary 3D rectangles (see Figure 4) such that in each rectangle there will be a different threshold for deciding whether two people are close to each other. In order to implement it practically, I defined several height's ranges and for each range decided on different distance threshold which is suitable for it. 
 
 | ![Figure4](../master/images/Figure4.png) | 
