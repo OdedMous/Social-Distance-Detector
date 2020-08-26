@@ -23,7 +23,7 @@ It turns out that this approach will work well only in some cases, such as when 
 |:--:| 
 | *Figure 1* |
 
-However, in case the camera is placed in an angle such that the people "are moving to the depths of the image" this idea as it is won't work. Let's demonstrate this by a specific example – Figure 2 shows frame from a video that displaying Rothschild Boulevard in Tel Aviv, and we used idea 2 on it:
+However, in case the camera is placed in an angle such that the people "are moving to the depths of the image" this idea won't work as it is. Let's demonstrate this by a specific example – Figure 2 shows frame from a video that displaying Rothschild Boulevard in Tel Aviv, and we used idea 2 on it:
 | ![Figure2](../master/images/Figure2.png) | 
 |:--:| 
 | *Figure 2* |
@@ -39,7 +39,7 @@ What went wrong? The answer is that these mistakes were derived from the depth d
 2) <ins> Not every pair of people in the image are "comparable": </ins> It can be that the centers of two people are close to each other in the image, while in the real world one person is in the front and the other is in the background (that is, they are far from each other), and therefore it is redundant to compare the distance between them in first place (hereinafter: "non-comparable objects").
 
 #### Idea 3: Distance in pixels adjusted by heights
-The two problems above can be solved by using the heights in pixels of the people in the image. Note that the deeper a person is in the picture, the smaller his "height in pixels" (hereinafter:  height) becomes. In order to calculate the height of each person we use the rectangular frames that yolo provides as an output after it classify the objects as people. The calculation formula will be: 
+The two problems above can be solved by using the heights in pixels of the people in the image. Note that the deeper a person is in the picture, the smaller his "height in pixels" (hereinafter:  height) becomes. In order to calculate the height of a person we use the rectangular frames that yolo provides as an output after it classify the objects as people. The calculation formula will be: 
 <br/>
 
 *Height = the difference in the Y-axis between the bottom edge and the top edge of the rectangular frame.* 
