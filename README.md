@@ -71,7 +71,7 @@ For every frame in the video: <br/>
 2) For every pair of people:
    - Calculate the heights of the people, and determine whether the two people are "comparable".
    - If they are comparable:
-  Calcuate the distance in pixels between them, and determine whether the distance restriction has been violated according to the distance threshold which suitable to the heights of these pair.
+  Calcuate the distance in pixels between them, and determine whether the distance restriction has been violated according to the distance threshold which suitable to the heights of this pair.
   
 ## **Results** <br/>
 | ![](../master/images/GIF.gif) | 
