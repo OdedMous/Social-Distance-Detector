@@ -18,7 +18,7 @@ Find an object in the scene which its real size is known, and then calculate rea
 
 #### Idea 2: Distance in pixels
 Calculate distance in pixels between every pair of people, and define some threshold that from it two people are considered as close to each other. <br/>
-It turns out that this approach will work well only in some cases, such as when the point view of the camera is from above the scene (see *Figure1*). 
+It turns out that this approach will work well only in some cases, such as when the point view of the camera is from above the scene (see *Figure 1*). 
 | ![Figure1](../master/images/Figure1.png) | 
 |:--:| 
 | *Figure 1* |
@@ -34,9 +34,9 @@ We can see that two mistakes were made in the context of distance restriction:
 
 What went wrong? The answer is that these mistakes were derived from the depth dimension of the scene that reflected more in this video compared to the previous video. In more detail the 2 problems are: <br/>
 
-1) There is no uniform distance threshold: In this frame, for two pairs of pixels that their distance in pixels is the same, the real distance they reflecting is not necessarily the same. This is because as we get closer to the infinity point in the image, the real distance between the objects becomes smaller. Hence the single defined threshold worked for objects that appeared in the middle of the image (the woman and the baby-wagon), and not for objects that appeared in the front of the image (the pair). In other words, the distance in pixels between two people is vary when the pair of people is in the front or in the background , and hence we can't define a single threshold  that is suitable for every pair of people in the frame.
+1) <ins> There is no uniform distance threshold: </ins> In this frame, for two pairs of pixels that their distance in pixels is the same, the real distance they reflecting is not necessarily the same. This is because as we get closer to the infinity point in the image, the real distance between the objects becomes smaller. Hence the single defined threshold worked for objects that appeared in the middle of the image (the woman and the baby-wagon), and not for objects that appeared in the front of the image (the pair). In other words, the distance in pixels between two people is vary when the pair of people is in the front or in the background , and hence we can't define a single threshold  that is suitable for every pair of people in the frame.
 
-2) Not every pair of people in the image are "comparable": It can be that the centers of two people are close to each other in the image, while in the real world one person is in the front and the other is in the background (that is, they are far from each other), and therefore it is redundant to compare the distance between them in first place (hereinafter: "non-comparable objects").
+2) <ins> Not every pair of people in the image are "comparable": </ins> It can be that the centers of two people are close to each other in the image, while in the real world one person is in the front and the other is in the background (that is, they are far from each other), and therefore it is redundant to compare the distance between them in first place (hereinafter: "non-comparable objects").
 
 #### Idea 3: Distance in pixels adjusted by heights
 The two problems above can be solved by using the heights in pixels of the people in the image. Note that the deeper a person is in the picture, the smaller his "height in pixels" (hereinafter:  height) becomes. In order to calculate the height of each person we use the rectangular frames that yolo provides as an output after it classify the objects as people. The calculation formula will be: 
