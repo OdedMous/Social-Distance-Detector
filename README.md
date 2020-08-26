@@ -23,7 +23,7 @@ It turns out that this approach will work well only in some cases, such as when 
 |:--:| 
 | *Figure 1* |
 
-However, in case the camera is placed in angle such that the people "are moving to the depths of the image" this idea as it is won't work. Let's demonstrate this by a specific example – Figure 2 shows frame from a video that displaying Rothschild Boulevard in Tel Aviv, and we used idea 2 on it:
+However, in case the camera is placed in an angle such that the people "are moving to the depths of the image" this idea as it is won't work. Let's demonstrate this by a specific example – Figure 2 shows frame from a video that displaying Rothschild Boulevard in Tel Aviv, and we used idea 2 on it:
 | ![Figure2](../master/images/Figure2.png) | 
 |:--:| 
 | *Figure 2* |
@@ -86,7 +86,7 @@ For every frame in the video: <br/>
 * We divide the scene into a finite-small number of rectangles such that in each rectangle there is a different distance threshold, and it's not accurate.
 * We chose the distance thresholds based on trial and error, which is also inaccurate.
 * This solution is very much adapted to this specific video, and if we want to use it for other video we will need to choose different thresholds etc.  We may even not be able to use this solution due to the different characteristics of each video.
-* This solution didn't consider cases which affecting the heights, such as:
+* This solution don't consider cases which affecting the heights, such as:
   * Children (whose heights are significantly different from that of adults).
   * The fact that a person can bend or lie on the floor.
 
