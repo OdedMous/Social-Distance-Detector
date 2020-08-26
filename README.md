@@ -71,15 +71,14 @@ For every frame in the video: <br/>
   Calcuate the distance in pixels between them, and determine whether the distance restriction has been violated according to the distance threshold which suitable to the heights of these pair.
   
 ## **Results** <br/>
+| ![](../master/images/GIF.gif) | 
+|:--:| 
+| *GIF* |
+
 | | |
 |-------------------------|-------------------------|
 |![](../master/images/result1.png) |  ![](../master/images/result2.png)|
 |*Note that the algorithm was able to detect the violation in the front and the violation in the middle of the image, even though the distance in pixels between each pair is different.*  |    *Note that although the centers of the woman with the baby-wagon and the other woman are very close, no violation is shown, as required.*  |
-
-
-| ![](../master/images/GIF.gif) | 
-|:--:| 
-| *GIF* |
 
 **Disadvantages of idea 3:**
 * Distance in pixels is inaccurate.
