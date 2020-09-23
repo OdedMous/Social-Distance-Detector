@@ -1,5 +1,7 @@
 # Social Distance Detector (using yolo) :mask:
-
+| ![](../master/images/GIF.gif) | 
+|:--:| 
+| *GIF* |
 ## **Goal** <br/>
 Given a video, check if there are people who violate the social distancing policy.
 
