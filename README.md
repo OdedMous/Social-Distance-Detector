@@ -1,7 +1,7 @@
 # Social Distance Detector (using yolo) :mask:
 ## **Goal** <br/>
-Given a video, check if there are people who violate the social distancing policy.
-| ![](../master/images/GIF.gif) | 
+Given a video, check if there are people who violate the social distancing policy. <br/>
+![](../master/images/GIF.gif) 
 
 ## **Note** <br/>
 The main part of this project is taken from [here](https://www.pyimagesearch.com/2020/06/01/opencv-social-distancing-detector/). This project is only intended to perform a variation on the original version in order to deal with a case that the original project did not handle (details below).
