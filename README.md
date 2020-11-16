@@ -11,7 +11,7 @@ For every frame in the video:
 1) Classify objects which are people (using yolo).
 2) Calculate the distance between the center points of each pair of people, and mark the pairs that violate the distance restriction.
 
-## We'll focus on phase 2 – How to calculate the distance between pair of people?
+## We'll focus on phase 2 – How to calculate the distance between a pair of people?
 
 #### Idea 1: Real distance
 Find an object in the scene which its real size is known, and then calculate real measurements by using some techniques (such as cross-ratio) in order to calculate the real distance between two people. A problem: It is not always possible to find such an object.
