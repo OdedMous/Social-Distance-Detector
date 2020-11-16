@@ -23,7 +23,7 @@ It turns out that this approach will work well only in some cases, such as when 
 |:--:| 
 | *Figure 1* |
 
-However, in case the camera is placed in an angle such that the people "are moving to the depths of the image" this idea won't work as it is. Let's demonstrate this by a specific example – Figure 2 shows frame from a video that displaying Rothschild Boulevard in Tel Aviv, and we used idea 2 on it:
+However, in case the camera is placed in an angle such that the people "are moving to the depths of the image" this idea won't work as it is. Let's demonstrate this by a specific example – Figure 2 shows a frame from a video that displaying Rothschild Boulevard in Tel Aviv, and we used idea 2 on it:
 | ![Figure2](../master/images/Figure2.png) | 
 |:--:| 
 | *Figure 2* |
